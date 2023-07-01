@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package gkit.errors;
+
+option go_package = "./;errors";
+
+message Error {
+  // code: status code
+  int32 code = 1;
+
+  // reason:
+  string reason = 2;
+
+  // message:
+  string message = 3;
+
+  // metadata:
+  map<string, string> metadata = 4;
+}

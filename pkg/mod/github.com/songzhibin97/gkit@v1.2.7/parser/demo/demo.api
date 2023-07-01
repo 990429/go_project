@@ -1,0 +1,61 @@
+package api
+
+
+type Request struct {
+    MapField        map[string]int
+    SliceField      []int
+	StringField     string
+	Uint32Field     uint32 `gkit:"pType=fixed32;"`
+	// 注释1
+    // 注释1.1
+
+    // 注释1.2
+	InterfaceField  interface{}
+	InterField      Inter
+	EmptyField
+}
+
+
+
+type Inter interface {
+    Inter()
+}
+
+type EmptyField interface {
+    Empty()
+}
+
+type Response struct {
+	Message  string
+	Username string
+	Password string
+}
+
+// 注释2
+// 注释3
+
+/*
+注释5
+注释6
+*/
+
+// @service:User
+// @method:post
+// @router:/register
+func Register(req Request)(Response){
+
+
+
+            // start
+            var _ = 1
+            // end
+
+}
+
+
+
+// @method:get
+// @router:/register2
+func Register2(req Request)(Response) {
+    // 注释func
+}
